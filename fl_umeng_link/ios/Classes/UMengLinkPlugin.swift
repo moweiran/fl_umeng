@@ -69,7 +69,7 @@ public class UMengLinkPlugin: NSObject, FlutterPlugin, MobClickLinkDelegate {
         return MobClickLink.handle(url, delegate: self)
     }
 
-    public func getLinkPath(_ path: String, params: [AnyHashable: Any]) {
+    public func getLinkPath(_ path: String?, params: [AnyHashable: Any]?) {
         self.path = path
         linkParams = params
         let params: [String: Any?] = [
